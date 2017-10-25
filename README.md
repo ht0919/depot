@@ -31,3 +31,9 @@ $ rails server
 - 2017/08/30 第9章 タスクD：カートの作成
 - 2017/09/06 第10章 タスクE：もっとスマートなカート
 - 2017/10/04 第11章 タスクF：Ajax の追加
+- 2017/10/25 第12章 タスクG：チェックアウト！
+  - 修正コード(p.163のorders_controller.rb)
+  ```
+  変更前: @orders = Order.paginate :page=>params[:page], :order=>'created_at desc', :per_page => 10
+  変更後: @orders = Order.page(params[:page]).order('created_at desc').per_page(10)
+  ```
