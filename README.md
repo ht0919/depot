@@ -37,3 +37,4 @@ $ rails server
   変更前: @orders = Order.paginate :page=>params[:page], :order=>'created_at desc', :per_page => 10
   変更後: @orders = Order.page(params[:page]).order('created_at desc').per_page(10)
   ```
+- 2017/11/15 第13章 タスクH：メールの送信
